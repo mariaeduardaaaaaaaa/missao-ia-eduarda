@@ -1,17 +1,24 @@
-const perguntas = [
-    {
-        enunciado: "O que mais te atrai em uma profissão?",
-        alternativas: [
-            {
-                texto: "Cuidar das pessoas, melhorar a vida delas.",
-                afirmacao: "Você tende para Saúde (Medicina, Enfermagem, Psicologia, Nutrição, Fisioterapia, Odontologia).",
-            },
-            {
-                texto: "Resolver problemas práticos e criar soluções.",
-                afirmacao: "Você tende para Exatas e Engenharias (Mecânica, Engenharia Mecânica, Software, Administração).",
-            }
-        ]
-    },
+const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPergunta = document.querySelector(".caixa-pergunta");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const TextoResultado = document.querySelector(".texto-resultado");
+
+
+const perguntas =
+{
+    enunciado: "O que mais te atrai em uma profissão?",
+    alternativas: [
+        {
+            texto: "Cuidar das pessoas, melhorar a vida delas.",
+            afirmacao: "Você tende para Saúde (Medicina, Enfermagem, Psicologia, Nutrição, Fisioterapia, Odontologia).",
+        },
+        {
+            texto: "Resolver problemas práticos e criar soluções.",
+            afirmacao: "Você tende para Exatas e Engenharias (Mecânica, Engenharia Mecânica, Software, Administração).",
+        }
+    ]
+},
     {
         enunciado: "Em que ambiente você se sente mais motivado?",
         alternativas: [
@@ -64,7 +71,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Como você gosta de resolver problemas?",
         alternativas: [
             {
@@ -77,7 +84,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Em relação à criatividade, você prefere:",
         alternativas: [
             {
@@ -90,7 +97,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Qual destas opções combina mais com você?",
         alternativas: [
             {
@@ -103,7 +110,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Se tivesse que escolher entre dois trabalhos:",
         alternativas: [
             {
@@ -116,7 +123,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "O que te traria mais satisfação?",
         alternativas: [
             {
@@ -125,8 +132,4 @@ const perguntas = [
             },
             {
                 texto: "Ver uma máquina, sistema ou experimento funcionando perfeitamente.",
-                afirmacao: "Perfil de Exatas, Agrárias, Tecnologia.",
-            }
-        ]
-    },
-];
+                afirmacao: "Perfil de Exatas, Agrárias, Tecno
