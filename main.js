@@ -71,7 +71,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Como você gosta de resolver problemas?",
         alternativas: [
             {
@@ -84,7 +84,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Em relação à criatividade, você prefere:",
         alternativas: [
             {
@@ -97,7 +97,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Qual destas opções combina mais com você?",
         alternativas: [
             {
@@ -110,7 +110,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "Se tivesse que escolher entre dois trabalhos:",
         alternativas: [
             {
@@ -123,7 +123,7 @@ const perguntas = [
             }
         ]
     },
-        {
+    {
         enunciado: "O que te traria mais satisfação?",
         alternativas: [
             {
@@ -142,9 +142,22 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 
-function mostraPergunta(){
+function mostraPergunta() {
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
+}
+
+function mostraAlternativas(){
+for(const alternativa of perguntaAtual.alternativas){
+    const botaoAlternativas = document.createElement("button");
+    botaoAlternativas.textContent = alternativa.texto;
+    botaoAlternativas.addEventListener("click", function(){
+        atual++
+        mostraPergunta();
+    })
+    caixaAlternativas.appendChild(botaoAlternativas);
+}
 }
 
 mostraPergunta();
